@@ -43,7 +43,5 @@ print(" --------------- ")
 
 
 
-
-
 #Ejercicio 2 _ Gestion de turnos hospitalarios
 print("EJERCICIO Gestion de turnos hospitalarios")
