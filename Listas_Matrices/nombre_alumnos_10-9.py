@@ -47,23 +47,18 @@ lista_alumnos = [
     "Agustina Luz Fontagnol"
 ]
 
-# Mezclar la lista de alumnos aleatoriamente
 random.shuffle(lista_alumnos)
 
 tamaño_grupo = 4
 
-# Calcular cantidad de grupos completos y alumnos sobrantes
 total_alumnos = len(lista_alumnos)
 cantidad_grupos = total_alumnos // tamaño_grupo
 alumnos_sobrantes = total_alumnos % tamaño_grupo
 
-# Lista que contendrá todos los grupos
 lista_grupos = []
 
-# Crear grupos equilibrados
 indice_inicio = 0
 for i in range(cantidad_grupos):
-    # Si hay sobrantes, este grupo recibe un alumno extra
     indice_fin = indice_inicio + tamaño_grupo + (1 if alumnos_sobrantes > 0 else 0)
     grupo_actual = lista_alumnos[indice_inicio:indice_fin]
     lista_grupos.append(grupo_actual)
@@ -71,6 +66,5 @@ for i in range(cantidad_grupos):
     if alumnos_sobrantes > 0:
         alumnos_sobrantes -= 1
 
-# Mostrar los grupos
 for numero_grupo, grupo in enumerate(lista_grupos, start=1):
     print(f"Grupo {numero_grupo}: {grupo}")
